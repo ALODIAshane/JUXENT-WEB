@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Submitted</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css" type="text/css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" integrity="sha512-Qp4NROe4Ox9ad+D5y5zeLq5rJ8WKGzBlPsKM6ZjU6Zm+9Kh0J6l/KmGvpLH/iLfh15vv8Mjq2/2wI+ikyxZa+A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .container {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .card {
+      flex: 1;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 5px 5px 5px #ccc;
+    }
+    
+  </style>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav" style="overflow: hidden;">
+      <a href="#" class="icon-a"><i class="fa fa-dashboard icons"></i>&nbsp;&nbsp;Dashboard</a>
+      <a href="records2.html"class="icon-a"><i class="fa-regular fa-clipboard icons"></i> &nbsp;&nbsp;Client Records</a>
+      <a href="Warranty.html"class="icon-a"><i class="fa-solid fa-shield icons"></i>&nbsp;&nbsp;Warranty</a>
+      <a href="Service Ticket Desk_report.html"class="icon-a"><i class="fa fa-list-alt icons"></i> &nbsp;&nbsp;Service Ticket Desk</a>
+      <a href="#"class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Accounts</a>
+      <a href="Login.html"class="icon-a"><i class="fa fa-power-off icons"></i> &nbsp;&nbsp;Logout</a>
+        
+        </div>   
+        
+        <div id="main">
+          
+            <div class="head">
+                <div class="col-div-7">
+        <span style="font-size:30px;cursor:pointer; color: grey;" class="nav1"  >&#9776; </span>
+        
+        <span style="font-size:30px;cursor:pointer; color: grey;" class="nav2"  >&#9776; </span>
+        </div>
+        </div>
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+              $(document).ready(function() {
+          $("#mySidenav").css('width', '70px');
+          $("#main").css('margin-left', '0px');
+          $(".nav2").css('display', 'none');
+        });
+        
+        $(".nav1").click(function(){
+          $("#mySidenav").css('width','250px');
+          $("#main").css('margin-left','250px');
+          $(".icon-a").css('visibility', 'visible');
+          $(".nav1").css('display','none');
+          $(".nav2").css('display','block');
+        });
+        
+        $(".nav2").click(function(){
+          $("#mySidenav").css('width','70px');
+          $("#main").css('margin-left','0px');
+          $(".icon-a").css('visibility', 'hidden');
+          $(".nav2").css('display','none');
+          $(".nav1").css('display','block');
+        });
+              </script>
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 mx-auto text-center">
+        <img src="oops.png">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title text-center mb-4">Turnover request was declined. Can you state why the request was declined?</h3>
+            <div class="d-flex justify-content-center">
+              <button type="button" class="btn btn-primary me-3">Confrim</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha512-mxatWpEckLH+Lmk/2gFOvZcWz/mH9R5dG0Q0ffgO/HWcmC3Hbq3xlq5M5Z5ajMkvoK9VymMFcBRaS7Vx8yFQdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

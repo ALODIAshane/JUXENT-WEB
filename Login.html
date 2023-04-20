@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  </head>
+  <body class="container-fluid">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 d-none d-lg-flex">
+            <img src="logo.png" alt="Taltos-web">
+          </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card my-5">
+            <div class="card-body" style="background: linear-gradient(180deg, #6F47FF 0%, #6C46F4 45.59%, #383838 108.79%);">
+              <h5 class="card-title text-center mb-4 fw-bold text-white">Welcome</h5>
+              <p class="text-center mb-4 text-white">Juxent is a service monitoring system specially made for your needs in JIMAC’s technical services. Login to your account now!</p>
+              <form>
+                <div class="mb-3">
+                  <label for="email" class="form-label"></label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label"></label>
+                  <input type="password" class="form-control" id="password" placeholder="Enter password">
+                </div>
+                <div class="d-grid">
+                  <button type="button" class="btn btn-primary btn-block bg-secondary fw-bold" onclick="window.location.href='records2.html'">Login</button>
+                </div>
+                <hr class="my-4">
+                <div class="text-center">
+                  <a href="#" class="text-white">Forgot password?</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" type="text/css"/>
+  <link rel="stylesheet" href="progress.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+  <title>Client Record Form</title>
+  <style>
+    .form-box {
+      margin: 0 auto;
+      max-width: 500px;
+      padding: 20px;
+      border: 1px solid #6F47FF;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body style="height:100%; overflow: scroll; width: 100%;">
+  
+    <div id="mySidenav" class="sidenav" style="overflow: hidden;">
+      <a href="#" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
+        <a href="records2.html"class="icon-a"><i class="fa-regular fa-clipboard icons"></i> &nbsp;&nbsp;Client Records</a>
+        <a href="Warranty.html"class="icon-a"><i class="fa-solid fa-shield icons"></i>&nbsp;&nbsp;Warranty</a>
+        <a href="Service Ticket Desk_report.html"class="icon-a"><i class="fa fa-list-alt icons"></i> &nbsp;&nbsp;Service Ticket Desk</a>
+        <a href="#"class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Accounts</a>
+        <a href="Login.html"class="icon-a"><i class="fa fa-power-off icons"></i> &nbsp;&nbsp;Logout</a>
+      
+      </div>   
+      
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div id="main">
+                <div class="head">
+                    <div class="col-div-7">
+            <span style="font-size:30px;cursor:pointer; color: grey;" class="nav1"  >&#9776; </span>
+            <span style="font-size:30px;cursor:pointer; color: grey;" class="nav2"  >&#9776; </span>
+            </div>
+            </div>
+            </div>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-bell"></i></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-user-gear"></i>
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </li>
+              <li class="nav-item">
+                <img src="cammy.png" class="rounded-circle" width="40" height="40" alt="User Image">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script>
+        $(document).ready(function() {
+    $("#mySidenav").css('width', '70px');
+    $("#main").css('margin-left', '40px');
+    $(".nav2").css('display', 'none');
+  });
+  
+  $(".nav1").click(function(){
+    $("#mySidenav").css('width','250px');
+    $("#main").css('margin-left','250px');
+    $(".icon-a").css('visibility', 'visible');
+    $(".nav1").css('display','none');
+    $(".nav2").css('display','block');
+  });
+  
+  $(".nav2").click(function(){
+    $("#mySidenav").css('width','70px');
+    $("#main").css('margin-left','40px');
+    $(".icon-a").css('visibility', 'hidden');
+    $(".nav2").css('display','none');
+    $(".nav1").css('display','block');
+  });
+        </script>
+
+<div class="row">
+    <div>
+      <h1>Client Record</h1>
+    </div>
+    <ul class="nav nav-tabs pads" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="Record-tab" data-bs-toggle="tab" data-bs-target="#Record-tab-panel" type="button" role="tab" aria-controls="Record-tab-panel" aria-selected="true" style="color: #6F47FF;">Record</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="others-tab" data-bs-toggle="tab" data-bs-target="#others-tab-panel" type="button" role="tab" aria-controls="others-tab-panel" aria-selected="false" style="color: #6F47FF;">Other Information</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="Record-tab-panel" role="tabpanel" aria-labelledby="Record-tab">
+        <!-- ticket form here -->
+      </div>
+      <div class="tab-pane fade" id="others-tab-panel" role="tabpanel" aria-labelledby="others-tab">
+        <!-- other info form here -->
+      </div>
+    </div>
+    
+    <!--script for changing tabs-->
+    <script>
+      const ticketTabButton = document.getElementById('Record-tab');
+      const otherTabButton = document.getElementById('others-tab');
+  
+      ticketTabButton.addEventListener('click', () => {
+        window.location.href = 'Client Record Form.html';
+      });
+  
+      otherTabButton.addEventListener('click', () => {
+        window.location.href = 'Client Record Otherinfo.html';
+      });
+    </script>
+
+  <div class="col-sm-8 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body px-5">
+          <!-- form contents go here -->
+        <form class="pads">
+          <h3>Client Information:</h3>
+          <div class="mb-3">
+              <input type="text" class="form-control form-control-plaintext" id="client-name" name="client-name " placeholder="Client Name">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control form-control-plaintext" id="company-address" name="company-address" placeholder="Company Address">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control form-control-plaintext" id="contact" name="contact" placeholder="Contact">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control form-control-plaintext" id="email" name="email" placeholder="Email">
+          </div>
+          <div class="mb-3">
+            <label for="contact-person" class="form-label"></label>
+            <input type="text" class="form-control form-control-plaintext" id="contact-person" name="contact-person" placeholder="Contact Person">
+          </div>
+
+          <hr>
+          <h3>Product Purchased Information:</h3>
+          <div class="mb-3">
+            <input type="text" class="form-control form-control-plaintext" id="software-type" name="software-type" placeholder="Software Type">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control form-control-plaintext" id="product-purchased" name="Product-Purchased" placeholder="Product Purchased">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control form-control-plaintext" id="amount-paid" name="Amoubt-paid" placeholder="Amount Paid">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control form-control-plaintext" id="date-paid" name="date-paid" placeholder="Date Paid">
+          </div>
+          <div class="mb-3">
+            <label for="support-signature" class="form-label">Official Receipt</label>
+            <input type="file" class="form-control" id="Official-Receipt" name="Official-Receipt"placeholder="Official Receipt">
+        </div>
+        <div class="mb-3">
+            <label for="client-signature" class="form-label">Acknowledgement Receipt</label>
+            <input type="file" class="form-control" id="Acknowledgement-Receipt" name="Acknowledgement-Receipt"placeholder="Acknowledgement Receipt">
+        </div>
+          <div class="mb-3">
+            <label for="date-picker" class="form-label">Date Paid</label>
+            <input type="date" id="date-picker" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control form-control-plaintext" id="warranty" name="warranty" placeholder="Warranty">
+          </div>
+          <div class="mb-3">
+            <label for="date-picker" class="form-label">Starting Date of Warranty Availed</label>
+            <input type="date" id="date-picker" class="form-control" required>
+          </div>
+          <h3>Record Status</h3>
+          <div class="mb-3">
+            <select class="form-select" id="Record-Status" required>
+              <option value="high">Pending</option>
+              <option value="medium">Ongoing</option>
+            </select>
+          </div>
+          </form>
+        </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4 mb-3 mb-sm-0">
+    <div class="d-flex px-5">
+      <form>
+        <h2>Add Note</h2>
+        <div class="mb-3">
+          <textarea class="form-control form-control-lg" id="note" name="note" rows="10" placeholder="Enter your note"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Save Note</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+        <!-- Bootstrap JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        
+        <style>
+            .form-control {
+                border-radius: 5px;
+                border: 2px solid #6F47FF;
+            }
+            select.form-select {
+                border-radius: 5px;
+                border: 2px solid #6F47FF;
+            }
+            .form-container {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .form-box {
+      width: 45%;
+    }
+  
+    .note-container {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .note-container form {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .card .pads{
+      padding-left: 100px;
+    }
+
+    .pads{
+      padding-left: 100px;
+    }
+
+    h1{
+      padding-left: 550px;
+    }
+        </style>
+        
+        </body>
+        </html>
+        
