@@ -135,15 +135,15 @@
                 <div class="mb-3">
                   <h2>Report</h2>
                   <label for="created-by" class="form-label">Created by</label>
-                  <input type="text" class="form-control" id="created-by" placeholder="Enter name">
+                  <input type="text" class="form-control" id="created-by" placeholder="Enter name" readonly>
                 </div>
                 <div class="mb-3">
                   <label for="date-create" class="form-label">Date created</label>
-                  <input type="date" class="form-control" id="date-create">
+                  <input type="date" class="form-control" id="date-create" readonly>
                 </div>
                 <div class="mb-3">
                   <label for="time-create" class="form-label">Time</label>
-                  <input type="time" class="form-control" id="time-create">
+                  <input type="time" class="form-control" id="time-create" readonly>
                 </div>
                 <div class="mb-3">
                   <label for="category" class="form-label">Category</label>
@@ -158,28 +158,28 @@
                 <div class="mb-3">
                   <h2>Ticket</h2>
                   <label for="ticket-id" class="form-label">Ticket ID</label>
-                  <input type="text" class="form-control" id="ticket-id" placeholder="Enter ID">
+                  <input type="text" class="form-control" id="ticket-id" placeholder="Enter ID" readonly>
                 </div>
                 <div class="mb-3">
                   <label for="ticket-type" class="form-label">Ticket Type</label>
-                  <input type="text" class="form-control" id="ticket-type" placeholder="Enter type">
+                  <input type="text" class="form-control" id="ticket-type" placeholder="Enter type" readonly>
                 </div>
                 <div class="mb-3">
                   <label for="ticket-created-by" class="form-label">Created by</label>
-                  <input type="text" class="form-control" id="ticket-created-by" placeholder="Enter name">
+                  <input type="text" class="form-control" id="ticket-created-by" placeholder="Enter name" readonly>
                 </div>
                 <div class="mb-3">
                   <label for="ticket-date-created" class="form-label">Date created</label>
-                  <input type="date" class="form-control" id="ticket-date-created">
+                  <input type="date" class="form-control" id="ticket-date-created" readonly>
                 </div>
                 <div class="mb-3">
                   <label for="ticket-time-created" class="form-label">Time</label>
-                  <input type="time" class="form-control" id="ticket-time-created">
+                  <input type="time" class="form-control" id="ticket-time-created" readonly>
                 </div>
                 <div class="mb-3">
-                  <label for="priority-level" class="form-label">Priority level</label>
+                  <label for="priority-level" class="form-label" >Priority level</label>
                   <select class="form-select" id="priority-level">
-                    <option selected>Choose...</option>
+                    <option selected >Choose...</option>
                     <option value="1">Low</option>
                     <option value="2">Medium</option>
                     <option value="3">High</option>
@@ -189,30 +189,29 @@
                 <div class="mb-3">
                   <h2>Assignment</h2>
                   <label for="dispatched-by" class="form-label">Dispatched by</label>
-                  <input type="text" class="form-control" id="dispatched-by" placeholder="Enter name">
+                  <input type="text" class="form-control" id="dispatched-by" placeholder="Enter name" readonly>
                 </div>
                 <div class="mb-3">
                   <label for="date-dispatched" class="form-label">Date dispatched</label>
-                  <input type="date" class="form-control" id="date-dispatched">
+                  <input type="date" class="form-control" id="date-dispatched" readonly>
                 </div>
                 <div class="mb-3">
                   <label for="time-dispatched"class="form-label">Time dispatched</label>
-                  <input type="time" class="form-control" id="time-dispatched">
+                  <input type="time" class="form-control" id="time-dispatched" readonly>
                   
                     </div>
                     <div class="mb-3">
                       <label for="dispatched-to" class="form-label">Dispatched to</label>
-                      <input type="text" class="form-control" id="dispatched-to" placeholder="Enter name">
+                      <input type="text" class="form-control" id="dispatched-to" placeholder="Enter name" readonly>
                     </div>
                     <div class="mb-3">
                       <label for="scheduled-date" class="form-label">Scheduled date for processing</label>
-                      <input type="date" class="form-control" id="scheduled-date">
+                      <input type="date" class="form-control" id="scheduled-date" readonly>
                     </div>
                     <div class="mb-3">
                       <label for="due-date" class="form-label">Due date</label>
-                      <input type="date" class="form-control" id="due-date">
+                      <input type="date" class="form-control" id="due-date" readonly>
                     </div>
-          <button type="button" class="btn btn-primary" onclick="window.location.href='ticket_submitted.html'">Submit</button>
           </form>
         </div>
       </div>
@@ -220,11 +219,10 @@
   <div class="col-sm-4 mb-3 mb-sm-0">
     <div class="d-flex px-5">
       <form>
-        <h2>Add Note</h2>
+        <h3>Notes</h3>
         <div class="mb-3">
-          <textarea class="form-control form-control-lg" id="note" name="note" rows="10" placeholder="Enter your note"></textarea>
+          <textarea class="form-control form-control-lg" id="note" name="note" rows="10" placeholder="Enter your note" readonly></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Save Note</button>
       </form>
     </div>
   </div>

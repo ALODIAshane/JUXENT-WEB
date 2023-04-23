@@ -168,7 +168,7 @@
                         <td><input type="checkbox" aria-label="Select this record"></td>
                         <td style="color:black">00-0000001</td>
                         <td style="color:black">Concern</td>
-                        <td style="color:black; background-color: red; border-radius: 10px; ">Urgent</td>
+                        <td  style="color:black;"><p style="background-color: red; border-radius: 5px; width: 70px;">Urgent</p></td>
                         <td style="color:black">Preventive Maintenance</td>
                         <td style="color:black">March 25</td>
                         <td  style="color:black">10:00 am</td>
@@ -191,7 +191,7 @@
                         <td><input type="checkbox" aria-label="Select this record"></td>
                         <td  style="color:black">00-0000002</td>
                         <td  style="color:black">Concern</td>
-                        <td  style="color:black; background-color: orange; border-radius: 10px; ">High</td>
+                        <td  style="color:black;"><p style="background-color: orange; border-radius: 5px; width: 70px;">High</p></td>
                         <td  style="color:black">Preventive Maintenance</td>
                         <td  style="color:black">March 25</td>
                         <td  style="color:black">10:00 am</td>
@@ -210,42 +210,56 @@
                               
                               <!-- Assign Table -->
                               <tr>
-                              <div id="Assign-table" style="display: none;">
-                                <form>
-                                  <div class="mb-3">
-                                    <label for="date-input" class="form-label">Date</label>
-                                    <input type="date" class="form-control" id="date-input">
-                                  </div>
-                                  <div class="mb-3">
-                                    <label for="priority-input" class="form-label">Priority</label>
-                                    <select class="form-select" id="priority-input">
-                                      <option selected disabled>Select Priority</option>
-                                      <option value="low">Low</option>
-                                      <option value="medium">Medium</option>
-                                      <option value="high">High</option>
-                                    </select>
-                                  </div>
-                                  <div class="mb-3">
-                                    <label for="dispatch-input" class="form-label">Dispatch To</label>
-                                    <input type="text" class="form-control" id="dispatch-input">
-                                  </div>
-                                  <div class="mb-3">
-                                    <label for="notes-input" class="form-label">Notes</label>
-                                    <textarea class="form-control" id="notes-input" rows="3"></textarea>
-                                  </div>
-                                  <button type="submit" class="btn btn-primary">Submit</button>
-                                  <button type="button" class="btn btn-secondary" onclick="hideAssignTable()">Cancel</button>
-                              </div>
-                              <script>
-                                function showAssignTable() {
-                                  document.getElementById("Assign-table").style.display = "block";
-                                }
-                              
-                                function hideAssignTable() {
-                                  document.getElementById("Assign-table").style.display = "none";
-                                }
-                              </script>
-                        </td>
+                                <td colspan="8">
+                               <div class="container" style="display: none;" id="Assign-table">
+      <div class="row">
+          <div class="col-md-2">
+              <div class="mb-3">
+                  <label for="date-input" class="form-label">Date</label>
+                  <input type="date" class="form-control" id="date-input">
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="mb-3">
+                  <label for="priority-input" class="form-label">Priority</label>
+                  <select class="form-select" id="priority-input">
+                      <option selected disabled>Select Priority</option>
+                      <option value="low">Low</option>
+                      <option value="medium">Medium</option>
+                      <option value="high">High</option>
+                  </select>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="mb-3">
+                  <label for="dispatch-input" class="form-label">Dispatch To</label>
+                  <input type="text" class="form-control" id="dispatch-input">
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="mb-3">
+                  <label for="notes-input" class="form-label">Notes</label>
+                  <textarea class="form-control" id="notes-input" rows="3"></textarea>
+              </div>
+          </div>
+          <div class="col-md-3 d-flex justify-content-end">
+            <button type="button" class="btn btn-secondary me-2" onclick="hideAssignTable()">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+      </div>
+  </div>
+</td>
+
+<script>
+  function showAssignTable() {
+      document.getElementById("Assign-table").style.display = "block";
+  }
+
+  function hideAssignTable() {
+      document.getElementById("Assign-table").style.display = "none";
+  }
+</script>
+</tr>
                       </tr>
                     </tbody>
                   </table>
